@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/main.css">
     <meta charset="UTF-8">
     <title>Maintenance Manager</title>
 </head>
 <body>
-    
+	<section id="maintenancesCards">
+		<article class="maintenance">
+			<p class="type">Preventivo</p>
+			<p class="date">Agosto 1, 2022</p>
+			<p class="status">Realizado</p>
+			<p class="responsible">Asignado a Carlos Cervantes</p>
+			<p class="comment">Mantenimiento eléctrico correspondiente al paro para mantenimiento de la línea.</p>
+			<ul class="activities">
+				<li>
+					<p class="name">Inspección visual</p>
+					<p class="description">Revisar visualmente los componentes.</p>
+				</li>
+				<li>
+					<p class="name">Limpieza con alcohol</p>
+					<p class="description">Limpiar los componentes con alcohol isopropílico.</p>
+				</li>
+				<li>
+					<p class="name">Sopleteado</p>
+					<p class="description">Limpiar polvo y suciedad con aire comprimido.</p>
+				</li>
+				<li>
+					<p class="name">Limpieza de filtro</p>
+					<p class="description">Limpiar el filtro del equipo.</p>
+				</li>
+			</ul>
+			<button class="normal">Ver más</button>
+			<button class="delete">Eliminar</button>
+		</article>
+	</section>
+	<script src="js/require.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
