@@ -2,40 +2,67 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap" rel="stylesheet"> 
     <meta charset="UTF-8">
     <title>Maintenance Manager</title>
 </head>
 <body>
-	<section id="maintenancesCards">
-		<article class="maintenance">
-			<p class="type">Preventivo</p>
-			<p class="date">Agosto 1, 2022</p>
-			<p class="status">Realizado</p>
-			<p class="responsible">Asignado a Carlos Cervantes</p>
-			<p class="comment">Mantenimiento eléctrico correspondiente al paro para mantenimiento de la línea.</p>
-			<ul class="activities">
-				<li>
-					<p class="name">Inspección visual</p>
-					<p class="description">Revisar visualmente los componentes.</p>
-				</li>
-				<li>
-					<p class="name">Limpieza con alcohol</p>
-					<p class="description">Limpiar los componentes con alcohol isopropílico.</p>
-				</li>
-				<li>
-					<p class="name">Sopleteado</p>
-					<p class="description">Limpiar polvo y suciedad con aire comprimido.</p>
-				</li>
-				<li>
-					<p class="name">Limpieza de filtro</p>
-					<p class="description">Limpiar el filtro del equipo.</p>
-				</li>
-			</ul>
-			<button class="normal">Ver más</button>
-			<button class="delete">Eliminar</button>
-		</article>
-	</section>
-	<script src="js/require.js"></script>
+	<header>
+		<div id="logo">
+			<img src="img/logo.svg" alt="Logo" height="50px">
+		</div>
+		<div id="title">
+			<h1>Gestión de Mantenimientos</h1>
+		</div>
+		<div id="user">
+			<img src="img/user.svg" alt="User" height="30px">
+			<p>Carlos</p><button id="userOptions"><img src="img/user-options.svg" alt="Options" height="9px"></button>
+		</div>
+	</header>
+	<div id="mainscreen">
+		<nav>
+			<a class="menuButton selected" href="index.html"><br><img src="img/dashboard.svg" height="30px"> Tablero</a>
+			<a class="menuButton"><br><img src="img/maintenances.svg" height="30px">Mantenimientos</a>
+			<a class="menuButton"><br><img src="img/plants.svg" height="30px">Equipos</a>
+			<a class="menuButton"><br><img src="img/calendar.svg" height="30px">Calendario</a>
+			<a class="menuButton"><br><img src="img/inventory.svg" height="30px">Inventario</a>
+			<a class="menuButton"><br><img src="img/pruchases.svg" height="30px">Compras</a>
+			<a class="menuButton"><br><img src="img/configuration.svg" height="30px">Configuración</a>
+		</nav>
+		<main>
+			<section class="today">
+				<h2>Para hoy</h2>
+				<div class="maintenancesCards">
+					<!-- <article class="maintenance">
+						<p class="date">Agosto 21</p>
+						<p class="description">Mantenimiento eléctrico correspondiente al paro para mantenimiento de la línea.</p>
+						<p class="responsible">Asignado a Carlos Cervantes</p>
+						<div class="buttons">
+							<button id="more"><img src="img/glasses.svg" alt="Ver más" width="32px"></button>
+							<button id="postpone"><img src="img/timer.svg" alt="Posponer" width="22px"></button>
+							<button id="cancel"><img src="img/rechaze.svg" alt="" width="24px"></button>
+							<button id="done"><img src="img/accept.svg" alt=""width="30px"></button>
+						</div>
+					</article> -->
+				</div>
+			</section>
+			<section class="programmed">
+				<h2>Programados</h2>
+			</section>
+			<div id="dashboard-buttons">
+				<button id="newMaintenance">
+					<p>Nuevo</p>
+					<img src="img/new.svg" alt="+">
+				</button>
+				<button id="newFailure">
+					<p>Reportar falla</p>
+					<img src="img/failure.svg" alt="!">
+				</button>
+			</div>
+		</main>
+	</div>
+	<!--Scripts-->
+	<!-- <script src="js/require.js"></script> -->
 	<script src="js/main.js"></script>
 </body>
 </html>
