@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap" rel="stylesheet"> 
+    <meta charset="UTF-8">
+    <title>Maintenance Manager</title>
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<img src="../img/logo.svg" alt="Logo" height="50px">
+		</div>
+		<div id="title">
+			<h1>Gestión de Mantenimientos</h1>
+		</div>
+		<div id="user">
+			<img src="../img/user.svg" alt="User" height="30px">
+			<p>Carlos</p><button id="userOptions"><img src="../img/user-options.svg" alt="Options" height="9px"></button>
+		</div>
+	</header>
+	<div id="mainscreen">
+		<nav>
+			<a class="menuButton" href="../index.html"><br><img src="../img/dashboard.svg" height="30px"> Tablero</a>
+			<a class="menuButton selected"><br><img src="../img/maintenances.svg" height="30px">Mantenimientos</a>
+			<a class="menuButton"><br><img src="../img/plants.svg" height="30px">Equipos</a>
+			<a class="menuButton"><br><img src="../img/calendar.svg" height="30px">Calendario</a>
+			<a class="menuButton"><br><img src="../img/inventory.svg" height="30px">Inventario</a>
+			<a class="menuButton"><br><img src="../img/pruchases.svg" height="30px">Compras</a>
+			<a class="menuButton"><br><img src="../img/configuration.svg" height="30px">Configuración</a>
+		</nav>
+		<main>
+			<div class="allpage">
+				<button id="backHome" onclick="window.open('../index.html', '_self')">Regresar</button>
+				<div class="tabsButtons">
+					<button id="preventive" class="selected">Mantenimiento preventivo</button>
+					<button id="corrective">Mantenimiento correctivo</button>
+				</div>
+				<div class="tabs">
+					<form action="" method="post" id="newMaintenanceForm">
+						<ul>
+							<li>
+								<label for="date">Programar para el</label>
+								<input type="date" name="date" id="date">
+							</li>
+							<li>
+								<label for="responsible">Asignado a</label>
+								<select name="responsible" id="responsible">
+									<option value="1">Carlos Cervantes</option>
+									<option value="2" selected>Adrián Ramírez</option>
+								</select>
+							</li>
+							<li>
+								<label for="schedule">Repetir</label>
+								<input type="checkbox" name="schedule" id="schedule">
+							</li>
+							<li>
+								<label for="scheduleTime">Repetir cada </label>
+								<input type="number" name="scheduleTime" id="scheduleTime" style="width: 50px">
+								<label for="scheduleTime" style="width: 5px;">días</label>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<label for="description">Descripción</label>
+								<textarea name="" id="" cols="100" rows="2"></textarea>
+							</li>
+						</ul>
+					</form>
+					<div id="activities">
+						Aquí viene lo dificil
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<!--Scripts-->
+	<!-- <script src="js/require.js"></script> -->
+	<script src="../js/maintenances.js"></script>
+</body>
+</html>

@@ -30,7 +30,20 @@ const addMaintenanceCard = function (maintenance) {
     $maintenancesCards.appendChild($article)
 }
 
-const newMaintenance = {
+function newMaintenance() {
+    const $main = document.querySelector('main');
+    $main.innerHTML = `
+        <button id="backHome" onclick="window.open('index.html', '_self')">Regresar
+        </button>`;
+
+    const $form = document.createElement('form');
+    $form.innerHTML = `
+        <label>`;
+
+    $main.append($form)
+}
+
+const maintenanceObject = {
     'id' : 1,
     'type' : 'Preventivo',
     'date' : 'Agosto 5',
@@ -49,12 +62,12 @@ const newMaintenance = {
     ]
 }
 
-const newMaintenance2 = Object.assign({}, newMaintenance);
+const newMaintenance2 = Object.assign({}, maintenanceObject);
 newMaintenance2.description = "Esto es una prueba."
 newMaintenance2.date = 'Agosto 21'
 newMaintenance2.responsible = 'Adrián Ramírez'
 
-addMaintenanceCard(newMaintenance);
+addMaintenanceCard(maintenanceObject);
 addMaintenanceCard(newMaintenance2);
-addMaintenanceCard(newMaintenance);
+addMaintenanceCard(newMaintenanmaintenanceObjectce);
 addMaintenanceCard(newMaintenance2);
